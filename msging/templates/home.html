@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+   <head>
+     
+      <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+ 
+    
+ <!---csss link---->
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/solid.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div id="chatbox">
+      <header>
+        <div id="nav" class="hide-mobile">
+          <div id="user-dp">
+            <a href="#"><i class="fas fa-user-circle" id="dp"></i></a>
+          </div>
+          <div id="action-icons">
+            <a href="#"><i class="fas fa-life-ring"></i></a>
+            <a href="/msg"><i class="fas fa-comment-alt"></i></a>
+            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+        </div>
+        <div id="" class="hide-desktop">
+          <div id="title">
+            <p>Edit</p>
+            <a href=""><i class="fas fa-edit"></i></a>
+          </div>
+          <div>
+            <h3><b>unkownChats</b></h3>
+          </div>
+        </div>
+        <div id="search-area">
+          <div id="search">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-arrow-left"></i>
+            <input type="text" id="text-input" placeholder="Search or start a new chat">
+          </div>
+        </div>
+        <div class="hide-desktop" id="chat-heading">
+           <p><b>New Group</b></p>
+          <p><b>search Group</b></p>
+        </div>
+
+      </header>
+
+
+      <div id="chat-list">
+
+
+
+
+
+<a style="text-decoration: none" href="/msg" class="user-link">
+        <div class="chat">
+          <img class="round" src="https://www.3dcaddcentre.com/wp-content/uploads/2020/10/CS-IT-scaled.jpg">
+          <div>
+            <p><b> cotton cs/it </b></p>
+            <p class="time-text">10:00</p>
+          </div>
+        </div></a>
+
+
+      <!--  <div class="chat">
+          <a href="#" class="user-link"><i class="fas fa-user-circle"></i></a>
+          <div>
+            <p><b>GROUP 2</b></p>
+            <p class="time-text">9:47</p>
+          </div>
+        </div>-->
+
+
+ 
+
+
+
+
+
+
+        <div id="bottom-box" class="hide-desktop">
+          <div id="bottom-menu">
+            <div>
+              <a href="#"><i class="fas fa-life-ring"></i></a>
+              <p>Status</p>
+            </div>
+           <!-- <div>
+              <a href="#"><i class="fas fa-phone"></i></a>
+              <p>Calls</p>
+            </div>
+            <div>
+              <a href="#"><i class="fas fa-camera"></i></i></a>
+              <p>Camera</p>
+            </div>-->
+            <div>
+              <a href="#"><i class="fas fa-comments"></i></a>
+              <p>Chats</p>
+            </div>
+            <div>
+              <a href="#"><i class="fas fa-cog"></i></a>
+              <p>Settings</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="whitebox">
+      <div id="wrapper">
+        <i class="fas fa-mobile"></i>
+        <h1>Keep your phone connected</h1>
+        <h5>welcome  connects to your phone to sync messges. coummnity bas chating annonymously</h5>
+        <br>
+        <br>
+        <hr>
+        <div>
+          <i class="fas fa-desktop"></i>
+          <p>** is available for windows. 
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+   
+<script>
+	var chats = document.querySelectorAll(".chat");
+var usrIcons = document.querySelectorAll(".fa-user-circle");
+var input = document.getElementById("text-input");
+var searchIcon = document.querySelector(".fa-search");
+var arrowIcon = document.querySelector(".fa-arrow-left");
+var colors = []
+
+
+
+for (var i = 0; i < chats.length; i++) {
+  chats[i].addEventListener("mouseenter", function () {
+    this.classList.add("active")
+  })
+  chats[i].addEventListener("mouseleave", function () {
+    this.classList.remove("active")
+  })
+}
+input.addEventListener("focusin", function () {
+  searchIcon.classList.add("hidden");
+  arrowIcon.classList.add("visible")
+})
+input.addEventListener("focusout", function () {
+  searchIcon.classList.remove("hidden");
+  arrowIcon.classList.remove("visible")
+})
+randomColor(15)
+//assign random colors to user icons
+for (var i = 0; i < userIcons.length; i++) {
+  userIcons[i].style.color = colors[i]
+}
+
+</script>
+   
+ 
+</body>
+
+</html>

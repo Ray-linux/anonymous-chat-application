@@ -1,0 +1,405 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif
+}
+
+
+
+.round {
+  display: inline-block;
+  width: 55px;
+  height: 40px;
+  border-radius: 50%;
+padding-left: 10px;
+  object-fit: cover;
+}
+
+
+
+.fa-user-circle {
+  font-size: 45px;
+  color: rgb(212, 211, 211);
+  margin-left: 10px
+}
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  width: 100%;
+  display: flex;
+}
+
+
+#chatbox {
+  width: 35%;
+  border-right: 1px solid rgb(226, 226, 226);
+}
+
+header {
+  border: none;
+  position: fixed;
+  width: inherit;
+  z-index: 1000;
+  height: 100px;
+  left: 0;
+  background-color: rgb(250, 249, 249);
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: rgb(238, 236, 236);
+}
+
+#dp {
+  font-size: 40px;
+  color: rgb(16, 164, 209);
+  margin: 0
+}
+
+#action-icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 8px;
+  margin-top: 5px;
+
+}
+
+.fa-life-ring {
+  font-size: 20px;
+  padding: 0 17px;
+  color: rgb(180, 180, 180)
+}
+
+.fa-comment-alt {
+  font-size: 20px;
+  padding: 0 17px;
+  color: rgb(180, 180, 180)
+}
+
+.fa-ellipsis-v {
+  font-size: 18px;
+  padding: 0 17px;
+  color: rgb(180, 180, 180)
+}
+
+#search-area {
+  text-align: center;
+  background-color: rgb(250, 249, 249);
+  height: 48px;
+}
+
+#search {
+  border: 1px solid rgb(250, 249, 249);
+  display: flex;
+  width: 90%;
+  height: 27px;
+  align-items: center;
+  padding: 5px;
+  background-color: #fff;
+  z-index: 2000;
+  border-radius: 25px;
+  margin: 7px auto 0 auto;
+}
+
+#text-input {
+  width: 75%;
+  height: inherit;
+  border: none;
+  margin: 7px auto;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.87);
+  outline: none;
+  font-size: 15px;
+}
+
+#text-input::placeholder {
+  color: rgb(165, 165, 165);
+  font-weight: 400
+}
+
+.fa-search {
+  color: rgb(165, 165, 165);
+  margin-left: 7px;
+  font-weight: 500;
+
+}
+
+.fa-arrow-left {
+  color: rgb(16, 164, 209);
+  font-weight: 500;
+  display: none;
+  visibility: hidden;
+  position: relative;
+  right: 10px;
+}
+.hide-desktop{
+  display: none;
+  visibility: hidden;
+}
+
+#chat-list {
+  margin-top: 124px
+}
+
+.chat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgb(214, 213, 213);
+  cursor: pointer;
+}
+
+
+
+.chat div {
+  width: 75%;
+  height: 70px;
+  margin-right: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.chat div :nth-child(1) {
+  font-size: 1em;
+}
+
+.time-text {
+  font-size: 0.8em;
+  color: rgb(168, 168, 168);
+  margin-top: 16px;
+}
+
+.active {
+  background-color: rgb(238, 236, 236);
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.visible {
+  display: inline-block;
+  visibility: visible;
+}
+
+#whitebox {
+  width: 64.8%;
+  position: fixed;
+  height: 407px;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  background-color: rgb(250, 249, 249);
+}
+
+#wrapper {
+
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px 40px;
+}
+
+.fa-mobile {
+  font-size: 280px;
+  color: rgb(192, 193, 194)
+}
+
+h1 {
+  font-weight: 300;
+  color: rgb(93, 93, 93);
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-weight: 400;
+  color: rgb(146, 146, 146);
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+#wrapper hr {
+  border: 0.5px solid rgb(235, 233, 233);
+  width: 85%;
+  margin: 0 auto;
+}
+
+#wrapper div {
+  width: 70%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-desktop {
+  color: rgb(146, 146, 146)
+}
+
+#wrapper div p {
+  margin-left: 5px;
+  color: rgb(146, 146, 146);
+  font-size: 1em;
+  font-weight: 400;
+}
+
+#wrapper div a {
+  text-decoration: none;
+  color: #07bc4c;
+}
+
+
+@media screen and (max-width:970px) {
+  #wrapper div {
+    width: 90%
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #chatbox {
+    width: 40%
+  }
+
+  #whitebox {
+    width: 59.8%;
+    position: static;
+  }
+
+  #wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+}
+
+@media screen and (max-width: 414px) {
+  .container {
+    display: block;
+  }
+
+  #chatbox {
+    width: 100%
+  }
+
+  header {
+    position: static;
+    height: 200px;
+    background-color: white;
+  }
+  #search-area{
+    width: 93%;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+  #search{
+    background-color: rgb(250, 249, 249);
+    padding-bottom: 0;
+    padding-top: 8px;
+    margin-top: 18px;
+  
+  }
+  #text-input{
+    background-color: rgb(250, 249, 249);
+    margin-top: 10px;
+    width: 85%;
+  }
+  .hide-desktop{
+    display: block;
+    visibility: visible;
+  }
+  .hide-mobile{
+    display: none;
+    visibility: hidden;
+  }
+  #nav{
+    display: none;
+    visibility: hidden;
+  }
+  #title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #title p{
+    margin-left: 15px;
+    font-size: 1.1em;
+    color: rgb(36, 40, 243)
+  }
+  .fa-edit{
+    font-size: 20px;
+    margin-right: 15px;
+    color: rgb(36, 40, 243)
+  }
+  h3{
+    font-size:25px;
+    margin: 5px 0 5px 20px
+  }
+  #chat-heading{
+    display: flex;
+    justify-content: space-between;
+  }
+  #chat-heading :nth-child(1){
+    margin-left: 15px;
+  }
+  #chat-heading :nth-child(2){
+    margin-right: 15px;
+  }
+  #bottom-box{
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    height: 50px;
+    background-color: rgb(250, 249, 249);
+    padding-top: 18px
+  }
+  #bottom-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto
+  }
+  #bottom-menu div{
+    text-align: center;
+  }
+  #bottom-menu div p{
+    color: rgb(161, 161, 161);
+    margin: 0;
+    font-size: 0.8em
+  }
+  #bottom-menu div i{
+    font-size: 25px;
+    color: rgb(161, 161, 161)
+  }
+  .fa-life-ring {
+    font-size: 20px;
+    color: rgb(161, 161, 161);
+    padding: 0;
+  }
+
+  #chat-list {
+    margin-top: 15px;
+    margin-bottom: 20px
+  }
+
+  #whitebox{
+    display: none;
+    visibility: hidden;
+  }
+
+}
